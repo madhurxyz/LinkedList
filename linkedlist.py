@@ -81,18 +81,33 @@ class LinkedList(object):
     def delete(self, item):
         """Delete the given item from this linked list, or raise ValueError"""
         current = self.head
-        previous = None
+
+        #if LinkedList is empty
         if current is None:
-            raise ValueError("Couldn't find item in LinkedList")
-        if self.head.data == item and self.head == self.tail:
-            self.head = current.next
-            self.tail = self.head
-        elif self.head.data == item:
-            self.head = current.next
-        else:
-            self.head = None
-        previous = current
-        current = current.next
+            raise ValueError('Cannot delete because LinkedList is empty.')
+
+        #if LinkedList has 1 item
+        if current.data == item:
+            if current.next is not None:
+                self.head = current.next
+            else:
+                self.head = None
+                self.tail = None
+            return
+
+        #if LinkedList has more than 1 item
+        while current.next is not None:
+            if current.next.data == item:
+                nextNext = current.next.next
+                if nextNext is not None:
+                    current.next = nextNext
+                else:
+                    current.next = None
+                    self.tail = current
+                return
+            current = current.next
+
+        raise ValueError("Item coudn't be deleted")
 
     def find(self, quality):
         """Return an item from this linked list satisfying the given quality"""
