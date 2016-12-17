@@ -45,9 +45,12 @@ class LinkedList(object):
 
     def length(self):
         """Return the length of this linked list by traversing its nodes"""
-        # TODO: count number of items
-
-        pass
+        count = 0
+        current = self.head
+        while current is not None:
+            count += 1
+            current = current.next
+        return count
 
     def append(self, item):
         """Insert the given item at the tail of this linked list"""
