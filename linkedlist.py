@@ -42,7 +42,9 @@ class LinkedList(object):
     def is_empty(self):
         """Return True if this linked list is empty, or False"""
         return self.head is None
-
+    #Best Case Omega(n)
+    #Worst Case O(n)
+    #Answer: Theta(n)
     def length(self):
         """Return the length of this linked list by traversing its nodes"""
         count = 0
