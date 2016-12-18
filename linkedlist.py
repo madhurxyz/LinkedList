@@ -124,7 +124,9 @@ class LinkedList(object):
             current = current.next
 
         raise ValueError("Item coudn't be deleted")
-
+    #Best Case Omega(n)
+    #Worst Case O(n)
+    #Answer: Theta(n)
     def find(self, quality):
         """Return an item from this linked list satisfying the given quality"""
         current = self.head
