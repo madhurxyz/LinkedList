@@ -135,6 +135,11 @@ class LinkedList(object):
                 return current.data
             current = current.next
 
+    def __iter__(self):
+        current = self.head
+        while current is not None:
+            yield current
+            current = current.next
 
 def test_linked_list():
     ll = LinkedList()
