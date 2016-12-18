@@ -69,6 +69,9 @@ class LinkedList(object):
             self.tail.next = new_tail
             self.tail = new_tail
 
+    #Best Case Omega(1)
+    #Worst Case O(1)
+    #Answer: Theta(1)
     def prepend(self, item):
         """Insert the given item at the head of this linked list"""
         if self.head is None:
