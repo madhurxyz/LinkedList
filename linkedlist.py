@@ -53,7 +53,9 @@ class LinkedList(object):
             count += 1
             current = current.next
         return count
-
+    #Best Case Omega(1)
+    #Worst Case O(1)
+    #Answer: Theta(1)
     def append(self, item):
         """Insert the given item at the tail of this linked list"""
         if self.head is None:
