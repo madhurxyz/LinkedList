@@ -135,6 +135,9 @@ class LinkedList(object):
                 return current.data
             current = current.next
 
+    #Best Case is Omega(1)
+    #Worst Case is O(1)
+    #Answer: Theta(1)
     def __iter__(self):
         current = self.head
         while current is not None:
