@@ -89,6 +89,9 @@ class LinkedList(object):
         """Delete the given item from this linked list, or raise ValueError"""
         current = self.head
 
+        #Best Case Omega(1)
+        #Worst Case O(1)
+        #Answer: Theta(1)
         #if LinkedList is empty
         if current is None:
             raise ValueError('Cannot delete because LinkedList is empty.')
