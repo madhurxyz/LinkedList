@@ -108,6 +108,9 @@ class LinkedList(object):
                 self.tail = None
             return
 
+        #Best Case Omega(n)
+        #Worst Case O(n)
+        #Answer: Theta(n)
         #if LinkedList has more than 1 item
         while current.next is not None:
             if current.next.data == item:
