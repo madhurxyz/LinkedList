@@ -96,6 +96,9 @@ class LinkedList(object):
         if current is None:
             raise ValueError('Cannot delete because LinkedList is empty.')
 
+        #Best Case Omega(1)
+        #Worst Case O(1)
+        #Answer: Theta(1)
         #if LinkedList has 1 item
         if current.data == item:
             if current.next is not None:
